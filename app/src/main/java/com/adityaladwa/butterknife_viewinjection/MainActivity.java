@@ -1,6 +1,5 @@
 package com.adityaladwa.butterknife_viewinjection;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -26,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-
     }
 
     @OnClick(R.id.myButton)
-    public void showText(Context context, String text) {
-        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+    public void showText() {
+        Toast.makeText(this, "Butter Knife", Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
